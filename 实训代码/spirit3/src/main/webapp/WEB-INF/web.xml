@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>sprint3</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.filter.LoginFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/FindallServlet.do</url-pattern>
+    </filter-mapping>  
+        <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/details.jsp</url-pattern>
+    </filter-mapping>   
+            <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/record.jsp</url-pattern>
+    </filter-mapping>   
+            <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/update.jsp</url-pattern>
+    </filter-mapping>   
+  
+    <servlet>
+        <servlet-name>AddServlet</servlet-name>
+        <servlet-class>com.Servlet.AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddServlet</servlet-name>
+        <url-pattern>/AddServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+    
+        <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.Servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>com.Servlet.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/DeleteServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FindallServlet</servlet-name>
+        <servlet-class>com.Servlet.FindallServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindallServlet</servlet-name>
+        <url-pattern>/FindallServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>com.Servlet.UpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/UpdateServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FindoneServlet</servlet-name>
+        <servlet-class>com.Servlet.FindoneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindoneServlet</servlet-name>
+        <url-pattern>/FindoneServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FindDetailsServlet</servlet-name>
+        <servlet-class>com.Servlet.FindDetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindDetailsServlet</servlet-name>
+        <url-pattern>/FindDetailsServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChangeRecordServlet</servlet-name>
+        <servlet-class>com.Servlet.ChangeRecordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeRecordServlet</servlet-name>
+        <url-pattern>/ChangeRecordServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PersonServlet</servlet-name>
+        <servlet-class>com.Servlet.PersonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PersonServlet</servlet-name>
+        <url-pattern>/PersonServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.Servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet.do</url-pattern>  <!-- 根据不同的url来调用不同的servlet来进行处理。 -->
+    </servlet-mapping>
+
+    
+</web-app>
